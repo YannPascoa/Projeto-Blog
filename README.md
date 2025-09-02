@@ -1,68 +1,153 @@
-# CodeIgniter 4 Application Starter
+# Projeto-Blog
+# Mini Blog em CodeIgniter 4
 
-## What is CodeIgniter?
+Bem-vindo ao **Mini Blog**, um projeto feito com **CodeIgniter 4** que possui funcionalidades completas de gerenciamento de posts, sistema de usuários com autenticação, comentários em posts e navegação básica.  
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Este projeto serve como **base de estudo e prática** para desenvolvimento web com PHP e CI4.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+---
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 🎯 Funcionalidades do Projeto
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+### Posts
+- Criar, editar, excluir e visualizar posts
+- Exibição de posts individuais
+- Navegação pela lista de posts
 
-## Installation & updates
+### Usuários
+- Registro e login de usuários
+- Logout seguro
+- Controle de acesso: apenas usuários logados podem criar posts ou comentar
+- Exibição do nome de usuário nos comentários
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+### Comentários
+- Adicionar comentários em posts (apenas usuários logados)
+- Exibição de comentários com autor e data
+- Ordenação dos comentários do mais recente para o mais antigo
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+### Layout
+- Responsivo com **Bootstrap 5**
+- Navegação básica entre blog e administração
+- Mensagens de feedback para ações (ex.: comentário adicionado, post criado)
 
-## Setup
+---
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+## 🛠 Tecnologias Utilizadas
 
-## Important Change with index.php
+- PHP 8.x
+- CodeIgniter 4
+- MySQL / MariaDB
+- Bootstrap 5
+- Composer (para dependências do CI4)
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+---
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## ⚙ Pré-requisitos
 
-**Please** read the user guide for a better explanation of how CI4 works!
+Para rodar o projeto em sua máquina, você precisa ter:
 
-## Repository Management
+1. PHP 8 ou superior
+2. Servidor web (Apache, Nginx ou PHP Built-in)
+3. MySQL ou MariaDB
+4. Composer
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+---
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+## 🚀 Instalação do Projeto
 
-## Server Requirements
+1. **Clonar o repositório**
+```bash
+git clone https://github.com/YannPascoa/Projeto-Blog.git
+cd Projeto-Blog
+```
+2. **Instalar dependências do CodeIgniter**
+```bash
+composer install
+```
+3. **Configurar o banco de dados**
+- Crie um banco chamado blog (ou outro nome de sua preferência)
+- Importe o arquivo SQL fornecido (database.sql) que contém as tabelas:
+  - users → usuários
+  - posts → posts
+  - comments → comentários
+- Configure o arquivo app/Config/Database.php com suas credenciais:
+```bash
+public $default = [
+    'DSN'      => '',
+    'hostname' => 'localhost',
+    'username' => 'SEU_USUARIO',
+    'password' => 'SUA_SENHA',
+    'database' => 'blog',
+    'DBDriver' => 'MySQLi',
+    ...
+];
+```
+4. **Configurar a base URL**
+No .env ou app/Config/App.php, ajuste:
+```bash
+public $baseURL = 'http://localhost/seu_projeto/';
+```
 
-PHP version 8.1 or higher is required, with the following extensions installed:
+---
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+## 🏃 Rodando o Projeto
+Você pode usar o servidor embutido do PHP para rodar localmente:
+```bash
+php spark serve
+```
+O projeto estará disponível em:
+```bash
+http://localhost:8080
+```
 
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
+---
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+## 📂 Estrutura do Projeto
+- app/Controllers/ → Controllers dos posts, usuários e comentários
+- app/Models/ → Models (PostModel, UserModel, CommentModel)
+- app/Views/ → Views do blog, login, registro, administração
+- app/Config/Routes.php → Todas as rotas configuradas
+- public/ → CSS, JS e arquivos públicos
+- writable/ → Pasta para logs e cache (gerenciada pelo CI4)
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+---
+
+## 📝 Como Utilizar
+### Navegação
+- Página inicial (/) → Welcome page com links para Blog e Admin
+- /blog → Lista de posts
+- /blog/novo → Criar novo post (usuário logado)
+- /blog/{id} → Ver post individual e comentários
+- /blog/editar/{id} → Editar post (usuário logado e dono do post)
+- /blog/excluir/{id} → Excluir post (usuário logado e dono/admin)
+- /auth/login → Login de usuário
+- /auth/register → Cadastro de usuário
+### Comentários
+- Só aparecem se houver pelo menos um comentário
+- Usuários logados podem adicionar comentários
+- Exibe o username do autor e a data do comentário
+
+---
+
+## 🔒 Segurança e Boas Práticas
+- Senhas dos usuários armazenadas com hash seguro
+- Formulários usam CSRF tokens
+- Rotas sensíveis protegidas por filtros (middleware):
+  - Usuários não logados são redirecionados para login
+  - Apenas admins ou donos podem editar/excluir posts
+- Validação de dados no backend para posts e comentário
+
+---
+
+## 📈 Possíveis melhorias futuras
+- Sistema de categorias ou tags nos posts
+- Likes ou upvotes em posts/comentários
+- Paginação para posts e comentários
+- Upload de imagens nos posts
+- Notificações de comentários para autores
+- Editor WYSIWYG para posts
+
+---
+
+## 📝 Licença
+Este projeto é aberto para estudo e uso pessoal.
