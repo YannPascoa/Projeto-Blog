@@ -1,0 +1,75 @@
+CRITICAL - 2025-08-26 19:01:12 --> ErrorException: Undefined variable $data
+[Method: GET, Route: home]
+in APPPATH\Views\pages\home.php on line 5.
+ 1 APPPATH\Views\pages\home.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\home.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\home.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('pages/home', [], true)
+ 5 APPPATH\Controllers\UserController.php(13): view('pages/home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
+CRITICAL - 2025-08-26 19:20:00 --> ErrorException: Attempt to read property "id" on array
+[Method: GET, Route: produtos]
+in APPPATH\Views\pages\produtos.php on line 6.
+ 1 APPPATH\Views\pages\produtos.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php', 6)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('pages/produtos', [], true)
+ 5 APPPATH\Controllers\UserController.php(23): view('pages/produtos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->product()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
+CRITICAL - 2025-08-26 19:20:11 --> ErrorException: Undefined variable $id
+[Method: GET, Route: produtos]
+in APPPATH\Views\pages\produtos.php on line 6.
+ 1 APPPATH\Views\pages\produtos.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php', 6)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('pages/produtos', [], true)
+ 5 APPPATH\Controllers\UserController.php(23): view('pages/produtos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->product()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
+CRITICAL - 2025-08-26 19:20:13 --> ErrorException: Undefined variable $id
+[Method: GET, Route: produtos]
+in APPPATH\Views\pages\produtos.php on line 6.
+ 1 APPPATH\Views\pages\produtos.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php', 6)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('pages/produtos', [], true)
+ 5 APPPATH\Controllers\UserController.php(23): view('pages/produtos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->product()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
+CRITICAL - 2025-08-26 19:21:40 --> ErrorException: Undefined variable $data
+[Method: GET, Route: produtos]
+in APPPATH\Views\pages\produtos.php on line 6.
+ 1 APPPATH\Views\pages\produtos.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php', 6)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Yan\\teste-ci4\\app\\Views\\pages\\produtos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('pages/produtos', [], true)
+ 5 APPPATH\Controllers\UserController.php(23): view('pages/produtos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserController->product()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')

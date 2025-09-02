@@ -1,0 +1,52 @@
+ERROR - 2025-08-22 18:26:12 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Commands\Database\CreateDatabase.php(136): CodeIgniter\Database\Config::forge()
+#5 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#6 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', Array)
+#7 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#8 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\Users\Yan\teste-ci4\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Database\Config.php(109): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Commands\Database\CreateDatabase.php(136): CodeIgniter\Database\Config::forge()
+#4 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\CreateDatabase->run(Array)
+#5 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:create', Array)
+#6 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#7 C:\Users\Yan\teste-ci4\vendor\codeigniter4\framework\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#8 C:\Users\Yan\teste-ci4\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-08-22 19:21:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home1.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home1.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home1', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
+CRITICAL - 2025-08-22 19:21:16 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home1.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home1.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('home1', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('home1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Yan\\teste-ci4\\public\\index.php')
