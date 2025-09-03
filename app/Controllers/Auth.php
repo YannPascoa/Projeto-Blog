@@ -52,7 +52,7 @@ class Auth extends BaseController
     }
 
     // Processa a autenticação do usuário
-    public function authenticate()
+    public function authUser()
     {
         $userModel = new UserModel();
 
